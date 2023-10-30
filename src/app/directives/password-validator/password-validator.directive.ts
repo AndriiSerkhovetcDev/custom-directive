@@ -21,7 +21,7 @@ export class PasswordValidatorDirective implements Validator{
     if (control.value) {
       const pattern = new RegExp(this.requiredPattern);
       const isValid = pattern.test(control.value);
-      console.log(isValid)
+
       if (!isValid) {
         return { passwordPattern: true };
       }

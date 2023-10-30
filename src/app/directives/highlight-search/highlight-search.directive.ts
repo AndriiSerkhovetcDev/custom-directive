@@ -9,7 +9,6 @@ export class HighlightSearchDirective implements OnChanges {
   constructor(private el: ElementRef) { }
 
   ngOnChanges() {
-    console.log(this.searchQuery)
     if (this.searchQuery && this.searchQuery.length > 0) {
       const text = this.el.nativeElement.innerText;
       const regex = new RegExp(`(${this.escapeRegExp(this.searchQuery)})`, 'gi');

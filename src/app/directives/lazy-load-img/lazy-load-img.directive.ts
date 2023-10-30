@@ -29,9 +29,8 @@ export class LazyLoadImgDirective {
 
   private loadImage() {
     const dataSrc = this.el.nativeElement.getAttribute('data-src');
-    console.log(this.el.nativeElement)
+
     if (dataSrc) {
-      console.log('directive working');
       this.renderer.setAttribute(this.el.nativeElement, 'src', dataSrc);
       this.el.nativeElement.removeAttribute('data-src');
     }
